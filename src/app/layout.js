@@ -1,5 +1,9 @@
+// Below I import all the necessary stuff :) ;) // 
+
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link" // This import is new to the code already existed before. It is importnant that it will be imported fron next and not from react //
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +15,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <h1>FETCH & SEARCH PARAMS</h1>
+        <h6>Additionally presenting PARAMS as a recap</h6>
+        <nav>
+          <Link href="/">HOME</Link>
+          <Link href="/about">ABOUT</Link>
+          <Link href="/posts">POSTS</Link>
+        </nav>
+        
+        {children}</body>
     </html>
   );
 }
