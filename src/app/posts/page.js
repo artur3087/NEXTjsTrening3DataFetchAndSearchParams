@@ -12,7 +12,10 @@ return ( // START of returning //
 
 <div>
     <h2> My cheeky posts: </h2>
-    {posts.map((post) => {
+    {posts.map((post) => {     // By adding to {posts.map... } "splice" we can choose a shorter number of data from API. Syntax for it below:
+    // {posts.splice(0, 10).map((post) => {  // Assuming that we want only 10 objects from API, which is jsonplaceholder here //
+        // return //  ...  and like below...  
+    // })}
         return (
         <div key = {post.id}>
             <h3>{post.title}</h3>
