@@ -1,4 +1,10 @@
+
+import Link from "next/link";
+
+
+
 export default async function PostsPage () { // START of default function PostsPage // This time function is async, so that makes a component async :) .//
+
 
 
     // Creating below a variable which will be used to fetch data //
@@ -18,13 +24,27 @@ return ( // START of returning //
     // })}
         return (
         <div key = {post.id}>
-            <h3>{post.title}</h3>
-            <p>{post.body}</p>
+            <Link href = {`/posts/${post.id}`}>{post.title}</Link>
+
         </div>
         );
-    })}
+
+        })}
+
 </div>
 
-) // END of returning // 
+); // END of returning //  
 
-} // END of a default function PostsPage //
+
+
+
+
+    }; // END of default function PostsPage //
+
+            //  <h3>{post.title}</h3> This is the original content I turned into comments in order to make a new functionality per LINK thing :) 
+        // <p>{post.body}</p> */}
+        // </div>
+//         );
+//     })}
+// </div>
+
